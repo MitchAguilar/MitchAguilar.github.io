@@ -56,9 +56,9 @@ export class Content extends React.Component {
               <p className="bio">{this.state.bio}</p>
 
               <div className="container">
-                <button className="btn"><span>Profiles</span><i className="material-icons">public</i>
+                <button className="btn"><span>Social</span><i className="material-icons">Netwoks</i>
                   <ul className="dropdown">
-                    <li className="active">
+                    <li>
                       <a href="https://www.npmjs.com/~mitch_aguilar_" target="blank">NPM</a>
                     </li>
                     <li>

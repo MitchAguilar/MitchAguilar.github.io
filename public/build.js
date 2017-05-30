@@ -22006,19 +22006,19 @@
 	                  _react2.default.createElement(
 	                    'span',
 	                    null,
-	                    'Profiles'
+	                    'Social'
 	                  ),
 	                  _react2.default.createElement(
 	                    'i',
 	                    { className: 'material-icons' },
-	                    'public'
+	                    'Netwoks'
 	                  ),
 	                  _react2.default.createElement(
 	                    'ul',
 	                    { className: 'dropdown' },
 	                    _react2.default.createElement(
 	                      'li',
-	                      { className: 'active' },
+	                      null,
 	                      _react2.default.createElement(
 	                        'a',
 	                        { href: 'https://www.npmjs.com/~mitch_aguilar_', target: 'blank' },
