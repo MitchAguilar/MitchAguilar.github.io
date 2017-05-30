@@ -11,13 +11,10 @@ export class Content extends React.Component {
       img: 'https://avatars3.githubusercontent.com/u/25367106?v=3&s=460',
       name: 'Mitch Aguilar',
       sub: 'Working with passion',
-      bio: 'Lived all my life on the top of mount Fuji, learning the way to be a Ninja Dev.',
+      bio: 'I want to create a better world.',
       skills: [{
         icon: 'python',
         title: 'A markov chain: predict text'
-      }, {
-        icon: 'nodejs',
-        title: 'Many projects: Libraries npm, APIs, sites, tutorials...'
       }, {
         icon: 'javascript_badge',
         title: 'Almost everything i could imagine'
@@ -27,10 +24,7 @@ export class Content extends React.Component {
       }, {
         icon: 'java',
         title: 'The ancestor from whom I learned many things'
-      }, {
-        icon: 'streamline',
-        title: 'A module for oracle'
-      }, {
+      },{
         icon: 'npm',
         title: 'Many libraries for NodeJS'
       }, {
@@ -42,7 +36,10 @@ export class Content extends React.Component {
       }, {
         icon: 'ionic',
         title: 'A few applications published in the playstore.'
-      }]
+      }, {
+        icon: 'go',
+        title: 'My new challenge'
+      }, ]
     };
   }
 
@@ -54,6 +51,7 @@ export class Content extends React.Component {
             <img src={this.state.img} />
             <div className="profileinfo">
               <h1>{this.state.name}</h1>
+              &nbsp;
               <h3>{this.state.sub}</h3>
               <p className="bio">{this.state.bio}</p>
 
