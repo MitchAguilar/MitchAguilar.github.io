@@ -1,0 +1,35 @@
+<div class="black">
+  <h1>
+    hola {{name}}
+  </h1>
+  <p>
+    {{email}}
+  </p>
+  <button (click)="togglehobbies()" class="btn">
+    {{!showhobbies ? 'Show Hobbies': 'Hide Hobbies'}}
+  </button>
+  <div *ngIf="showhobbies" class="white">
+    <h3>Hobbies: </h3>
+    <ul>
+      <li *ngFor="let hobby of hobbies">
+        {{hobby}}
+      </li>
+    </ul>
+    <form (submit)="newHobby(hobby)">
+      <input #hobby 
+      type="text" 
+      name="hobby"
+      placeholder="hobby" />
+    </form>
+  </div>
+</div>
+<div class="black">
+  <h3>Modify the content:</h3>
+  <label for="name">Name: </label>
+  <input 
+   type="text"
+   name="name"
+   placeholder = "change the name"
+   [(ngModel)] = "name"
+   />
+</div>
