@@ -1,0 +1,5 @@
+# robots.txt generated at https://www.stmsas.com.co
+User-agent: *
+Disallow: 
+Disallow: /cgi-bin/
+Sitemap: https://mitchaguilar.xyz/sitemap.xml

@@ -4,8 +4,7 @@
   "theme_color": "#000000",
   "background_color": "#abb3b9",
   "display": "browser",
-  "Scope": "/",
-  "start_url": "/https://www.mitchaguilar.xyz",
+  "start_url": "index.html?launcher=true",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
@@ -50,3 +49,4 @@
   ],
   "splash_pages": null
 }
+
