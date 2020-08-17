@@ -19,4 +19,4 @@ Header set Content-Security-Policy "self"
 # Cabecera Feature-Policy
 Header set Feature-Policy "accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; payment 'none'; usb 'none'"
 
-ErrorDocument 404 https://www.mitchaguilar.xyz/Error/index.html
+ErrorDocument 404 https://www.mitchaguilar.me/Error/index.html
