@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://www.codexworld.com/wp-content/uploads/2014/09/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="Live Demo at CodexWorld - Convert HTML to PDF using JavaScript by CodexWorld">
+    <meta name="keywords" content="demo, codexworld demo, project demo, live demo, tutorials, programming, coding">
+    <meta name="author" content="CodexWorld">
+
+
+
+</head>
+
+<body>
+    <div id="customers">
+
+
+        <table>
+            <colgroup span="2" width="100"></colgroup>
+            <colgroup span="2" width="100"></colgroup>
+            <thead>
+                <tr class='warning'>
+                    <th>Country Brayan</th>
+                    <th>Population</th>
+                    <th>Date</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ingresos</td>
+                    <td>Gastos</td>
+                    <td>Ingresos</td>
+                    <td>Gastos</td>
+                </tr>
+                <tr>
+                    <td>1.000€</td>
+                    <td>700€</td>
+                    <td>1.100€</td>
+                    <td>580€</td>
+                </tr>
+                <tr>
+                    <td>1.800€</td>
+                    <td>920€</td>
+                    <td>1.750€</td>
+                    <td>920€</td>
+                </tr>
+            </tbody>
+        </table>
+        <img src="codexworld-logo.png">
+        <table>
+            <colgroup span="2" width="100"></colgroup>
+            <colgroup span="2" width="100"></colgroup>
+            <thead>
+                <tr class='warning'>
+                    <th>Country Brayan</th>
+                    <th>Population</th>
+                    <th>Date</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ingresos</td>
+                    <td>Gastos</td>
+                    <td>Ingresos</td>
+                    <td>Gastos</td>
+                </tr>
+                <tr>
+                    <td>1.000€</td>
+                    <td>700€</td>
+                    <td>1.100€</td>
+                    <td>580€</td>
+                </tr>
+                <tr>
+                    <td>1.800€</td>
+                    <td>920€</td>
+                    <td>1.750€</td>
+                    <td>920€</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Titulo</h1>
+        <table>
+            <colgroup span="2" width="100"></colgroup>
+            <colgroup span="2" width="100"></colgroup>
+            <thead>
+                <tr class='warning'>
+                    <th>Country Brayan</th>
+                    <th>Population</th>
+                    <th>Date</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ingresos</td>
+                    <td>Gastos</td>
+                    <td>Ingresos</td>
+                    <td>Gastos</td>
+                </tr>
+                <tr>
+                    <td>1.000€</td>
+                    <td>700€</td>
+                    <td>1.100€</td>
+                    <td>580€</td>
+                </tr>
+                <tr>
+                    <td>1.800€</td>
+                    <td>920€</td>
+                    <td>1.750€</td>
+                    <td>920€</td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <colgroup span="2" width="100"></colgroup>
+            <colgroup span="2" width="100"></colgroup>
+            <thead>
+                <tr class='warning'>
+                    <th>Country Brayan</th>
+                    <th>Population</th>
+                    <th>Date</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ingresos</td>
+                    <td>Gastos</td>
+                    <td>Ingresos</td>
+                    <td>Gastos</td>
+                </tr>
+                <tr>
+                    <td>1.000€</td>
+                    <td>700€</td>
+                    <td>1.100€</td>
+                    <td>580€</td>
+                </tr>
+                <tr>
+                    <td>1.800€</td>
+                    <td>920€</td>
+                    <td>1.750€</td>
+                    <td>920€</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <button onclick="javascript:demoFromHTML();">PDF</button>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+    <!-- jsPDF library -->
+    <script src="/jspdf.min.js"></script>
+
+    <script>
+        function demoFromHTML() {
+            var pdf = new jsPDF('p', 'pt', 'letter');
+            source = $('#customers')[0];
+
+            specialElementHandlers = {
+                '#bypassme': function (element, renderer) {
+                    return true
+                }
+            };
+            margins = {
+                top: 80,
+                bottom: 60,
+                left: 40,
+                width: 522
+            };
+            pdf.fromHTML(
+                source, // HTML string or DOM elem ref.
+                margins.left, // x coord
+                margins.top, { // y coord
+                'width': margins.width, // max width of content on PDF
+                'elementHandlers': specialElementHandlers
+            }, function (dispose) {
+                // dispose: object with X, Y of the last line add to the PDF 
+                //          this allow the insertion of new lines after html
+                pdf.save('Test.pdf');
+            }, margins);
+        }
+    </script>
+</body>
+
+</html>
