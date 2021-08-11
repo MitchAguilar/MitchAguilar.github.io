@@ -9,157 +9,261 @@
     <meta name="keywords" content="demo, codexworld demo, project demo, live demo, tutorials, programming, coding">
     <meta name="author" content="CodexWorld">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
+
+
 
 
 </head>
 
 <body>
+
+
+    <button id="downloadPdf">Download Table as PDF</button>
+
     <div id="customers">
-
-
-        <table>
-            <colgroup span="2" width="100"></colgroup>
-            <colgroup span="2" width="100"></colgroup>
-            <thead>
-                <tr class='warning'>
-                    <th>Country Brayan</th>
-                    <th>Population</th>
-                    <th>Date</th>
-                    <th>Age</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Ingresos</td>
-                    <td>Gastos</td>
-                    <td>Ingresos</td>
-                    <td>Gastos</td>
-                </tr>
-                <tr>
-                    <td>1.000€</td>
-                    <td>700€</td>
-                    <td>1.100€</td>
-                    <td>580€</td>
-                </tr>
-                <tr>
-                    <td>1.800€</td>
-                    <td>920€</td>
-                    <td>1.750€</td>
-                    <td>920€</td>
-                </tr>
-            </tbody>
-        </table>
-        <img src="codexworld-logo.png">
-        <table>
-            <colgroup span="2" width="100"></colgroup>
-            <colgroup span="2" width="100"></colgroup>
-            <thead>
-                <tr class='warning'>
-                    <th>Country Brayan</th>
-                    <th>Population</th>
-                    <th>Date</th>
-                    <th>Age</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Ingresos</td>
-                    <td>Gastos</td>
-                    <td>Ingresos</td>
-                    <td>Gastos</td>
-                </tr>
-                <tr>
-                    <td>1.000€</td>
-                    <td>700€</td>
-                    <td>1.100€</td>
-                    <td>580€</td>
-                </tr>
-                <tr>
-                    <td>1.800€</td>
-                    <td>920€</td>
-                    <td>1.750€</td>
-                    <td>920€</td>
-                </tr>
-            </tbody>
-        </table>
-        <h1>Titulo</h1>
-        <table>
-            <colgroup span="2" width="100"></colgroup>
-            <colgroup span="2" width="100"></colgroup>
-            <thead>
-                <tr class='warning'>
-                    <th>Country Brayan</th>
-                    <th>Population</th>
-                    <th>Date</th>
-                    <th>Age</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Ingresos</td>
-                    <td>Gastos</td>
-                    <td>Ingresos</td>
-                    <td>Gastos</td>
-                </tr>
-                <tr>
-                    <td>1.000€</td>
-                    <td>700€</td>
-                    <td>1.100€</td>
-                    <td>580€</td>
-                </tr>
-                <tr>
-                    <td>1.800€</td>
-                    <td>920€</td>
-                    <td>1.750€</td>
-                    <td>920€</td>
-                </tr>
-            </tbody>
-        </table>
-        <table>
-            <colgroup span="2" width="100"></colgroup>
-            <colgroup span="2" width="100"></colgroup>
-            <thead>
-                <tr class='warning'>
-                    <th>Country Brayan</th>
-                    <th>Population</th>
-                    <th>Date</th>
-                    <th>Age</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Ingresos</td>
-                    <td>Gastos</td>
-                    <td>Ingresos</td>
-                    <td>Gastos</td>
-                </tr>
-                <tr>
-                    <td>1.000€</td>
-                    <td>700€</td>
-                    <td>1.100€</td>
-                    <td>580€</td>
-                </tr>
-                <tr>
-                    <td>1.800€</td>
-                    <td>920€</td>
-                    <td>1.750€</td>
-                    <td>920€</td>
-                </tr>
-            </tbody>
-        </table>
-
+        <br>
+        <div class="row">
+            <div class="col s12 m6">
+                <table class="tg" id="myTable">
+                    <thead>
+                        <tr>
+                            <th class="tg-0lax encabezado" colspan="1">miércoles, 11/08/2021</th>
+                            <th class="tg-0lax encabezado" colspan="1">Amplitud</th>
+                            <th class="tg-0lax encabezado" colspan="1"> Producción </th>
+                            <th class="tg-0lax encabezado" colspan="1"> Producción </th>
+                        </tr>
+                        <tr>
+                            <th class="tg-0lax encabezado" colspan="1"> Gran_Americas_Fontibon</th>
+                            <th class="tg-0lax encabezado" colspan="1"> 09:15:01</th>
+                            <th class="tg-0lax encabezado" colspan="1"> 08:19:47</th>
+                            <th class="tg-0lax encabezado" colspan="1"> 08:19:47</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tg-hmp3-1wig encabezado" colspan="2">Trabajo 1 (15:51:00 - 20:44:46) </td>
+                            <td class="tg-hmp3-1wig encabezado" colspan="2">Servicio vehículo T01490061 </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-1wig encabezado">Hora</td>
+                            <td class="tg-1wig encabezado">Tarea</td>
+                            <td class="tg-1wig encabezado">Bus</td>
+                            <td class="tg-1wig encabezado">Parada</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">15:51:00</td>
+                            <td class="tg-hmp3">Relevo De : WILSON FERNANDO GALEANO DUARTE</td>
+                            <td class="tg-hmp3"></td>
+                            <td class="tg-hmp3">K301 La Felicidad</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">16:01:00</td>
+                            <td class="tg-hmp3">K301 La Felicidad</td>
+                            <td class="tg-hmp3">5</td>
+                            <td class="tg-hmp3">K301 La Felicidad</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">16:27:57</td>
+                            <td class="tg-hmp3">K301 La Felicidad</td>
+                            <td class="tg-hmp3">5</td>
+                            <td class="tg-hmp3">K301 La Felicidad</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">16:50:00</td>
+                            <td class="tg-hmp3">STANDBY</td>
+                            <td class="tg-hmp3"></td>
+                            <td class="tg-hmp3">K301 La Felicidad</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">16:50:15</td>
+                            <td class="tg-hmp3">K301 La Felicidad</td>
+                            <td class="tg-hmp3">5</td>
+                            <td class="tg-hmp3">K301 La Felicidad</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">17:16:56</td>
+                            <td class="tg-hmp3">K301 La Felicidad</td>
+                            <td class="tg-hmp3">5</td>
+                            <td class="tg-hmp3">K301 La Felicidad</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">17:38:45</td>
+                            <td class="tg-hmp3">STANDBY</td>
+                            <td class="tg-hmp3"></td>
+                            <td class="tg-hmp3">K301 La Felicidad</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">17:45:00</td>
+                            <td class="tg-hmp3">K301 La Felicidad</td>
+                            <td class="tg-hmp3">5</td>
+                            <td class="tg-hmp3">K301 La Felicidad</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">18:14:09</td>
+                            <td class="tg-hmp3">K301 La Felicidad</td>
+                            <td class="tg-hmp3">5</td>
+                            <td class="tg-hmp3">K301 La Felicidad</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">18:38:00</td>
+                            <td class="tg-hmp3">STANDBY</td>
+                            <td class="tg-hmp3"></td>
+                            <td class="tg-hmp3">K301 La Felicidad</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">18:43:00</td>
+                            <td class="tg-hmp3">K301 La Felicidad</td>
+                            <td class="tg-hmp3">5</td>
+                            <td class="tg-hmp3">K301 La Felicidad</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">19:12:17</td>
+                            <td class="tg-hmp3">K301 La Felicidad</td>
+                            <td class="tg-hmp3">5</td>
+                            <td class="tg-hmp3">K301 La Felicidad</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">19:36:15</td>
+                            <td class="tg-hmp3">STANDBY</td>
+                            <td class="tg-hmp3"></td>
+                            <td class="tg-hmp3">K301 La Felicidad</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">19:43:00</td>
+                            <td class="tg-hmp3">K301 La Felicidad</td>
+                            <td class="tg-hmp3">5</td>
+                            <td class="tg-hmp3">K301 La Felicidad</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">20:04:52</td>
+                            <td class="tg-hmp3">K301 La Felicidad</td>
+                            <td class="tg-hmp3">5</td>
+                            <td class="tg-hmp3">K301 La Felicidad</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">20:22:45</td>
+                            <td class="tg-hmp3">Vacío</td>
+                            <td class="tg-hmp3">5</td>
+                            <td class="tg-hmp3">K301 La Felicidad</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">20:44:45</td>
+                            <td class="tg-hmp3">Fin de Servicio Y Tanqueo</td>
+                            <td class="tg-hmp3"></td>
+                            <td class="tg-hmp3">Patio Refugio</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3-1wig encabezado" colspan="2">Trabajo 2 (21:40:00 - 25:06:01) </td>
+                            <td class="tg-hmp3-1wig encabezado" colspan="2">Servicio vehículo T01490040 </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-1wig encabezado">Hora</td>
+                            <td class="tg-1wig encabezado">Tarea</td>
+                            <td class="tg-1wig encabezado">Bus</td>
+                            <td class="tg-1wig encabezado">Parada</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">21:40:00</td>
+                            <td class="tg-hmp3">Relevo De : HECTOR ALONSO GONZALEZ ROMERO</td>
+                            <td class="tg-hmp3"></td>
+                            <td class="tg-hmp3">Patio Refugio</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">22:20:00</td>
+                            <td class="tg-hmp3">16-10 Villemar</td>
+                            <td class="tg-hmp3">4</td>
+                            <td class="tg-hmp3">Portal Eldorado 16-10 Villemar</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">22:35:45</td>
+                            <td class="tg-hmp3">16-10 Villemar</td>
+                            <td class="tg-hmp3">4</td>
+                            <td class="tg-hmp3">Portal Eldorado 16-10 Villemar</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">22:51:30</td>
+                            <td class="tg-hmp3">STANDBY</td>
+                            <td class="tg-hmp3"></td>
+                            <td class="tg-hmp3">Portal Eldorado 16-10 Villemar</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">23:00:00</td>
+                            <td class="tg-hmp3">16-10 Villemar</td>
+                            <td class="tg-hmp3">4</td>
+                            <td class="tg-hmp3">Portal Eldorado 16-10 Villemar</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">23:16:00</td>
+                            <td class="tg-hmp3">16-10 Villemar</td>
+                            <td class="tg-hmp3">4</td>
+                            <td class="tg-hmp3">Portal Eldorado 16-10 Villemar</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">23:32:00</td>
+                            <td class="tg-hmp3">STANDBY</td>
+                            <td class="tg-hmp3"></td>
+                            <td class="tg-hmp3">Portal Eldorado 16-10 Villemar</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">23:38:00</td>
+                            <td class="tg-hmp3">16-10 Villemar</td>
+                            <td class="tg-hmp3">4</td>
+                            <td class="tg-hmp3">Portal Eldorado 16-10 Villemar</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">23:54:00</td>
+                            <td class="tg-hmp3">16-10 Villemar</td>
+                            <td class="tg-hmp3">4</td>
+                            <td class="tg-hmp3">Portal Eldorado 16-10 Villemar</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">24:10:00</td>
+                            <td class="tg-hmp3">STANDBY</td>
+                            <td class="tg-hmp3"></td>
+                            <td class="tg-hmp3">Portal Eldorado 16-10 Villemar</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">24:20:00</td>
+                            <td class="tg-hmp3">16-10 Villemar</td>
+                            <td class="tg-hmp3">4</td>
+                            <td class="tg-hmp3">Portal Eldorado 16-10 Villemar</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">24:35:00</td>
+                            <td class="tg-hmp3">16-10 Villemar</td>
+                            <td class="tg-hmp3">4</td>
+                            <td class="tg-hmp3">Portal Eldorado 16-10 Villemar</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">24:50:00</td>
+                            <td class="tg-hmp3">Vacío</td>
+                            <td class="tg-hmp3">4</td>
+                            <td class="tg-hmp3">Portal Eldorado 16-10 Villemar</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-hmp3">25:06:00</td>
+                            <td class="tg-hmp3">Fin de Servicio Y Tanqueo</td>
+                            <td class="tg-hmp3"></td>
+                            <td class="tg-hmp3">Patio Refugio</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
+    <br />
+
+
     <button onclick="javascript:demoFromHTML();">PDF</button>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-
-    <!-- jsPDF library -->
-    <script src="/jspdf.min.js"></script>
 
     <script>
         function demoFromHTML() {
-            var pdf = new jsPDF('p', 'pt', 'letter');
+            /*var pdf = new jsPDF('p','pt', 'a4', true);
+            pdf.cellInitialize();
             source = $('#customers')[0];
 
             specialElementHandlers = {
@@ -168,9 +272,10 @@
                 }
             };
             margins = {
-                top: 80,
-                bottom: 60,
-                left: 40,
+                top: 20,
+                bottom: 20,
+                left: 20,
+                rigth: 20,
                 width: 522
             };
             pdf.fromHTML(
@@ -183,8 +288,20 @@
                 // dispose: object with X, Y of the last line add to the PDF 
                 //          this allow the insertion of new lines after html
                 pdf.save('Test.pdf');
-            }, margins);
+            }, margins);*/
+
         }
+
+        $("#downloadPdf").click(function () {
+            var doc = new jsPDF('l', 'pt', 'a4');
+            doc.autoTable({
+                html: '#myTable', 
+                styles: { fillColor: [58, 127, 238] },
+                columnStyles: { 0: { halign: 'center', fillColor: [243, 202, 99] } }, // Cells in first column centered and green
+                margin: { top: 10 }
+            })
+            doc.save('table.pdf')
+        })
     </script>
 </body>
 
